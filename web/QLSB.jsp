@@ -3,7 +3,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@page import="Model.San"%>
-
 <%@page import="DAO.DaoSan"%>
 <%@page import="java.util.*"%>
 <%@page import="java.io.*"%>
@@ -64,17 +63,25 @@
                                                                                 </select>
                                                                             </td>
                                                                             <td>
+                                                                                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+                                                                                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
 
-                                                                                <select name="chonngay">
-                                                                                    <option >Chọn ngày</option>                                                                            
-                                                                                    <%                                                                                 
-   Date dNow = new Date();
-   SimpleDateFormat ft = 
-   new SimpleDateFormat ("yyyy-MM-dd");
-   //out.print( "<h2 align=\"center\">" + ft.format(dNow) + "</h2>");
-%>
-<option ><%=ft.format(dNow) %></option>
-                                                                                </select>
+                                                                                <script>
+                                                                                    $(function () {
+                                                                                        $("#to").datepicker({dateFormat: 'yy-mm-dd'});
+                                                                                        $("#from").datepicker({dateFormat: 'yy-mm-dd'}).bind("change", function () {
+                                                                                            var minValue = $(this).val();
+                                                                                            minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
+                                                                                            minValue.setDate(minValue.getDate() + 1);
+                                                                                            $("#to").datepicker("option", "minDate", minValue);
+                                                                                        })
+                                                                                    });
+
+                                                                                </script> 
+                      
+                                                                                 <div class="" name="ngaydat">
+                                                                                    <p><input type="text" id="from"></p>
+                                                                                </div>                                                                       
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
@@ -145,4 +152,10 @@
                                                                                         </div>
                                                                                         </div>
                                                                                         </body>
+                                                                                        <script>
+                                                                                            $('#targetDate').datepicker({
+                                                                                                format: 'dd-mm-yyyy'
+                                                                                            });
+                                                                                        </script>
+
                                                                                         </html>
