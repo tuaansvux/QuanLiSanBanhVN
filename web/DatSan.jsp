@@ -86,7 +86,7 @@
                         </div>
 
                         <div class="midle-right">
-                            <p>Lưu ý : Nên đọc nội  qui trước khi đặt sân</p>
+                            <p>Lưu ý : Nên đọc nội  qui trước khi đặt sân aaa</p>
                         </div>
 
                         <div class="bottom1-right">
