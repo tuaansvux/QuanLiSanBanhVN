@@ -29,7 +29,7 @@
     width: 20%;
 }
 
-select {
+select, #datepicker {
     color: magenta;
     font-size: 22px;
     padding: 10px;
@@ -76,7 +76,7 @@ h3 {
 	color: wheat;
 }
 
-tr {
+#tableds tr {
 	width: 650px;
 	height: 60px;
 }
@@ -87,7 +87,7 @@ h1#ct1 {
     margin-top: 130px;
 }
 
-table {
+#tableds {
 	width: 650px;
 	font-size: xx-large;
 	text-align: center;
@@ -246,3 +246,7 @@ div#header {
 	transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
 .btn_sub {border: none;text-align: center;cursor: pointer;text-transform: uppercase;outline: none;overflow: hidden;color: #fff;font-weight: 700;font-size: 15px;background-color: #222;padding: 17px 60px;margin-bottom: 20px;border-radius: 20px;}
+
+#datepicker{
+
+}

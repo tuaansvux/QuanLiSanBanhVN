@@ -10,7 +10,7 @@ public class ConnectDB {
 
     private static Connection connection;
     public static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    public static final String DB_NAME = "databaseName=asdteam;";
+    public static final String DB_NAME = "databaseName=QLSB;";
     public static final String connectionUrl = "jdbc:sqlserver://localhost:1433;" + DB_NAME + ";integratedSecurity=True";
 
     public static Connection getConnection() throws SQLException {

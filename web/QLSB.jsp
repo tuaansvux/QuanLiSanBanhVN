@@ -1,26 +1,48 @@
-<%@page import="java.time.Year"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%-- 
+    Document   : QLSB
+    Created on : Oct 17, 2018, 12:15:39 PM
+    Author     : Admin
+--%>
 
+<%@page import="java.sql.Date"%>
+<%@page import="Model.SuatDat"%>
 <%@page import="Model.San"%>
 <%@page import="DAO.DaoSan"%>
-<%@page import="java.util.*"%>
-<%@page import="java.io.*"%>
-
-`<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <html lang="en">
                 <head>
                     <meta charset="UTF-8">
                         <title>Đặt sân online</title>
+
                         <link rel="stylesheet" href="styles.css">
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                                 <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
                                     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+                                        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+                                        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+                                        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+                                        <script>
+                                            $(document).ready(
+                                                    function () {
+                                                        $("#datepicker").datepicker({
+                                                            dateFormat: 'yy-mm-dd',
+                                                            changeMonth: false, //Tùy chọn này cho phép người dùng chọn tháng
+                                                            changeYear: false //Tùy chọn này cho phép người dùng lựa chọn từ phạm vi năm
+                                                        });
+                                                        var a = $('input#datepicker').val();
+                                                        console.log(a);
+                                                    }
+                                            );
+                                        </script>
+
                                         </head>
                                         <body>
-                                            <form action=Test.jsp method="POST">
-                                                <%DaoSan ds = new DaoSan();%>
+                                            <form action=DatSan.jsp method="POST">
+                                                <%DaoSan ds = new DaoSan();%>   
                                                 <div id="page">
                                                     <div id="header">
                                                         <div class="left logo">
@@ -40,7 +62,7 @@
                                                         <div id="navigate">
                                                             <div id="navigate-datsan">
                                                                 <form id="ndatsan">
-                                                                    <table>
+                                                                    <table id="tableds">
                                                                         <tr>
                                                                             <td colspan="2">
                                                                                 Đặt sân online
@@ -63,25 +85,7 @@
                                                                                 </select>
                                                                             </td>
                                                                             <td>
-                                                                                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-                                                                                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
-
-                                                                                <script>
-                                                                                    $(function () {
-                                                                                        $("#to").datepicker({dateFormat: 'yy-mm-dd'});
-                                                                                        $("#from").datepicker({dateFormat: 'yy-mm-dd'}).bind("change", function () {
-                                                                                            var minValue = $(this).val();
-                                                                                            minValue = $.datepicker.parseDate("yy-mm-dd", minValue);
-                                                                                            minValue.setDate(minValue.getDate() + 1);
-                                                                                            $("#to").datepicker("option", "minDate", minValue);
-                                                                                        })
-                                                                                    });
-
-                                                                                </script> 
-                      
-                                                                                 <div class="" name="ngaydat">
-                                                                                    <p><input type="text" id="from"></p>
-                                                                                </div>                                                                       
+                                                                                <p><input type="text" size="8" name="datepicker" id="datepicker" /></p>	
                                                                             </td>
                                                                         </tr>
                                                                         <tr>
@@ -108,7 +112,10 @@
                                                                                         </tr>
 
                                                                                         </table>
+  
+  
 
+                                                                               
                                                                                         </form>
                                                                                         </div>
 
@@ -152,10 +159,4 @@
                                                                                         </div>
                                                                                         </div>
                                                                                         </body>
-                                                                                        <script>
-                                                                                            $('#targetDate').datepicker({
-                                                                                                format: 'dd-mm-yyyy'
-                                                                                            });
-                                                                                        </script>
-
                                                                                         </html>
