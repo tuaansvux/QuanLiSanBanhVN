@@ -66,7 +66,7 @@
                                 <li>
                                     <p>Địa chỉ</p>
                                     <div class="box">
-                                        <input type="text" name="Address">
+                                        <input type="text" name="Address" value="">
                                     </div>
                                 </li>
                                 <li>
@@ -99,7 +99,7 @@
                                 %>
 
                                 <li>
-                                    <p>Loại sân</p>
+                                    <p>Tên sân</p>
                                     <input type="text" name="Masan" value=<%=sd.getMaSan()%>>
                                 </li>
 
@@ -112,7 +112,7 @@
                                     <p>Giờ đặt</p>
                                     <input type="text" name="Hour" value=<%=sd.getMaSuat()%>>
                                 </li>
-                                <%}%>
+                               
                             </ul>
                         </div>
 
@@ -121,17 +121,20 @@
                     <div class="end-right">
                         <ul>
                             <li>
-                                <a href="#"><p>Hủy</p></a>
+                                <a href="#"><p id="huy">Hủy</p></a>
                             </li>
 
                             <li>
-                                <a href="#"><p>Xác nhận</p></a>
+                                <a href="/QLSB/datsancomplete.jsp"><p>Xác nhận</p></a>
+                                
+                                 <%}%>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+                            
 
     </body>
 </html>

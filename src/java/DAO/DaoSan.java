@@ -4,12 +4,13 @@ import ConnectDB.ConnectDB;
 import Model.San;
 import Model.SuatDat;
 import java.sql.Connection;
-import java.util.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -72,6 +73,22 @@ public class DaoSan {
         }
         return list;
     }
+    public void getDatSan(String masan,String masuat,Date ngay) {            //static
+        //ArrayList<SuatDat> list = new ArrayList<>();
+     
+      
+        try {
+          
+            Connection connection = ConnectDB.getConnection(); // mở kết nối cơ sở dữ liệu
+            Statement statement = connection.createStatement();// cho phép thực hiện truy vấn sql trên java
+            String sql = "sp_insertDatSan '"+masan+"','"+masuat+"','"+ngay+"'";//"sp_TimSanTrong '"+loaisan+"','"+ngay+"','"+giodat+"'";
+            int rs = statement.executeUpdate(sql);        // thực hiện truy vấn theo câu truy vấn truyền vào bằng hàm executeQuery của class statement
+
+        } catch (SQLException ex) {
+            Logger.getLogger(DaoSan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //return list;
+    }
 
     public static void main(String[] args) {
         
@@ -83,6 +100,8 @@ public class DaoSan {
         for (SuatDat ds : d.getShowSanTim()) {
             System.out.println(ds.getMaSan() + "   " + ds.getMaSuat()+ ds.getNgay());
         }
+        //d.getDatSan(masan, masuat, "20-3-2018");
+        
 
     }
 }

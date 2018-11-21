@@ -41,10 +41,8 @@
 
                                         </head>
                                         <body>
-                                            <form action=DatSan.jsp method="POST">
-                                                <%DaoSan ds = new DaoSan();%>   
-                                                <div id="page">
-                                                    <div id="header">
+                                            
+                                            <div id="header">
                                                         <div class="left logo">
                                                             <a href="http://asdteam.com/" title="Trang chủ">
                                                                 <img alt="asdteam.com" title="asdteam.com" src="./img/logo.png">
@@ -54,10 +52,14 @@
                                                             <a href="http://asdteam.com/" title="Trang chủ">
                                                                 <img alt="asdteam.com" title="asdteam.com" src="./img/asdfinal.png">
                                                             </a>
-                                                            <button class="btn"><SPAN>Đăng Nhập</SPAN></button>
+                                                           <button class="btn"><a href="login.jsp"><span>Đăng Nhập</span></a></button>
                                                         </div>	
                                                         <div class="clear"></div>
                                                     </div>
+                                            <form action=DatSan.jsp method="POST">
+                                                <%DaoSan ds = new DaoSan();%>   
+                                                <div id="page">
+                                                    
                                                     <div class="main-menu">
                                                         <div id="navigate">
                                                             <div id="navigate-datsan">

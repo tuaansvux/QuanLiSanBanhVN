@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: inline-block;
+}
+li{
+	list-style-type: none;
+}
+.Logo {
+    width: 330px;
+    float: left;
+    padding: 30px ;
+    padding-left: 60px;
+}
+a{
+	text-decoration: none;
+}
+
+.Logo img {
+    width: 100%;
+    
+}
+.Logo-middle {
+    width: 180px;
+    float: left;
+    padding: 30px 200px;
+}
+.Logo-middle img {
+    width: 100%;
+}
+
+.clear{
+	clear: both;
+}
+.Login {
+    width: 100px;
+    float: left;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.Login p {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    opacity: 0.6;
+    color: #c7c7b0;
+    border-radius: 5px;
+}
+.Login p:hover{
+	
+    color: #02f789;
+    background-color: #040404;
+}
+.bottom-left {
+    width: 400px;
+    float: left;
+   	padding-left: 60px;
+}
+.bottom-right {
+    width: 639px;
+    float: left;
+    margin-left: 170px;
+
+    
+}
+
+.bottom-left ul li p {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 57px;
+    background-color: #333;
+    opacity: 0.6;
+    color: #c7c7b0;
+    border-radius: 5px;
+}
+.bottom-left ul li p:hover{
+	color: #02f789;
+    background-color: #040404;
+}
+.top-bottom-right {
+    border: 1px solid black;
+     background-color: #333;
+    opacity: 0.6;
+    color: #c7c7b0;
+    border-radius: 5px;
+}
+
+.top1-right p {
+	width: 100px;
+    float: left;
+    padding: 0 20px;
+}
+
+.midle-right p {
+    margin: 15px 50px;
+    color: #fd1609;
+    text-decoration: underline;
+}
+
+.bottom1-right {
+    margin: 27px 50px;
+}
+.bottom1-right ul li {
+    display: inline-block;
+}
+.bottom1-right input[type="text"] {
+    width: 70%;
+    border-radius: 5px;
+    height: 24px;
+}
+.bottom1-right p {
+    padding-bottom: 10px;
+}
+.box {
+    width: 353px;
+    float: left;
+}
+.top1-right li {
+    display: inline-block;
+    /* margin-left: 30px; */
+    margin: 12px 30px;
+}
+.box input[type="text"] {
+    width: 100%;
+    background-color: #040303;
+    border: 2px solid black;
+    opacity: 8.6;
+    color:#02f789;
+    border-radius: 5px;
+    padding: 5px;
+}
+.end-right li {
+    width: 130px;
+    float: left;
+    padding-right: 160px;
+}
+.end-right p {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 17px;
+    background-color: #333;
+    opacity: 0.6;
+    color: #c7c7b0;
+}
+.end-right p:hover{
+	color: #02f789;
+    background-color: #040404;
+}
+.end-right {
+    display: inline-block;
+    padding: 20px 0;
+    margin-left: 50px;
+}
+.bottom {
+    display: inline-block;
+}
+.layout {
+    background-image: url(../images/inc/stadium.jpg);
+    overflow: hidden;
+    background-repeat: round;
+}

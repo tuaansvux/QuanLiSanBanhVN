@@ -13,7 +13,7 @@ public class ConnectDB {
     public static final String DB_NAME = "databaseName=QLSB;";
     public static final String connectionUrl = "jdbc:sqlserver://localhost:1433;" + DB_NAME + ";integratedSecurity=True";
 
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection()  {
         if (connection == null) {
             try {
                 Class.forName(DRIVER);
